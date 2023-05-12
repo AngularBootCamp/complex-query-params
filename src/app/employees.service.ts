@@ -43,10 +43,11 @@ export class EmployeeService {
 
     this.employees = this.tableOptions.pipe(
       switchMap(options => {
-        const params = {
-          _sort: options.sortBy,
-          _order: options.sortDirection
-        };
+        const params: { _sort: string; _order: string; q?: string } =
+          {
+            _sort: options.sortBy,
+            _order: options.sortDirection
+          };
 
         if (options.filter) {
           params['q'] = options.filter;

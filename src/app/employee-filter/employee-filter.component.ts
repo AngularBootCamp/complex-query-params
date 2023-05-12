@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'app-employee-filter',
   templateUrl: './employee-filter.component.html',
-  styleUrls: ['./employee-filter.component.css']
+  styleUrls: ['./employee-filter.component.scss']
 })
 export class EmployeeFilterComponent implements OnDestroy {
   @Input() set filterTerm(val: string | undefined) {

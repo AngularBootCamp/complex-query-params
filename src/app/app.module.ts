@@ -7,8 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { EmployeeFilterComponent } from './employee-filter/employee-filter.component';
-import { EmployeeListHeaderComponent } from './employee-list-header/employee-list-header.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeListHeaderComponent } from './employee-list-header/employee-list-header.component';
 
 const routes: Routes = [
   { path: '', component: EmployeeDashboardComponent }

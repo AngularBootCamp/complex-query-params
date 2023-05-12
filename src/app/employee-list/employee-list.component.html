@@ -1,7 +1,7 @@
-<table class="striped centered">
+<table role="grid">
   <thead>
     <tr>
-      <td class="header center-align" *ngFor="let header of headers">
+      <td *ngFor="let header of headers">
         <app-employee-list-header
           [propertyName]="header.propertyName"
           [display]="header.display"
