@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
   Subscription,
@@ -10,7 +10,9 @@ import {
 @Component({
   selector: 'app-employee-filter',
   templateUrl: './employee-filter.component.html',
-  styleUrls: ['./employee-filter.component.scss']
+  styleUrls: ['./employee-filter.component.scss'],
+  standalone: true,
+  imports: [ReactiveFormsModule]
 })
 export class EmployeeFilterComponent implements OnDestroy {
   @Input() set filterTerm(val: string | undefined) {

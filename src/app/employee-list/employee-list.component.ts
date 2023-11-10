@@ -1,12 +1,16 @@
+import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
+import { EmployeeListHeaderComponent } from '../employee-list-header/employee-list-header.component';
 import { Employee, TableOptions } from '../employees.service';
 
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.scss']
+  styleUrls: ['./employee-list.component.scss'],
+  standalone: true,
+  imports: [NgFor, EmployeeListHeaderComponent, RouterLink]
 })
 export class EmployeeListComponent {
   @Input() employees: Employee[] = [];
