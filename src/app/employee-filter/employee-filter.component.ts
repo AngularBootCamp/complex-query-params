@@ -10,12 +10,12 @@ import {
 @Component({
   selector: 'app-employee-filter',
   templateUrl: './employee-filter.component.html',
-  styleUrls: ['./employee-filter.component.scss'],
+  styleUrl: './employee-filter.component.scss',
   standalone: true,
   imports: [ReactiveFormsModule]
 })
 export class EmployeeFilterComponent implements OnDestroy {
-  @Input() set filterTerm(val: string | undefined) {
+  @Input({ required: true }) set filterTerm(val: string | undefined) {
     console.log({ val });
     if (val !== undefined) {
       this.filter.setValue(val);

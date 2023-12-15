@@ -8,13 +8,13 @@ import { Employee, TableOptions } from '../employees.service';
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.scss'],
+  styleUrl: './employee-list.component.scss',
   standalone: true,
   imports: [NgFor, EmployeeListHeaderComponent, RouterLink]
 })
 export class EmployeeListComponent {
-  @Input() employees: Employee[] = [];
-  @Input() options: TableOptions | undefined;
+  @Input({ required: true }) employees!: Employee[];
+  @Input({ required: true }) options: TableOptions | undefined;
 
   headers = [
     {
