@@ -1,4 +1,3 @@
-import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
@@ -10,7 +9,7 @@ import { Employee, TableOptions } from '../employees.service';
   templateUrl: './employee-list.component.html',
   styleUrl: './employee-list.component.scss',
   standalone: true,
-  imports: [NgFor, EmployeeListHeaderComponent, RouterLink]
+  imports: [EmployeeListHeaderComponent, RouterLink]
 })
 export class EmployeeListComponent {
   @Input({ required: true }) employees!: Employee[];

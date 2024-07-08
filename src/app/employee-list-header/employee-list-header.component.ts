@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   Component,
   EventEmitter,
@@ -12,8 +11,7 @@ import { TableOptions } from '../employees.service';
   selector: 'app-employee-list-header',
   templateUrl: './employee-list-header.component.html',
   styleUrl: './employee-list-header.component.scss',
-  standalone: true,
-  imports: [NgIf]
+  standalone: true
 })
 export class EmployeeListHeaderComponent {
   @Input({ required: true }) propertyName!: string;
